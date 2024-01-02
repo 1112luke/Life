@@ -150,7 +150,7 @@ export default function Gamebox() {
 
     useEffect(() => {
         clearCells();
-    }, []);
+    }, [rows]);
 
     return (
         <>
@@ -229,6 +229,30 @@ export default function Gamebox() {
             >
                 <div>stop</div>
             </a>
+            <input
+                type="range"
+                style={{ position: "absolute", bottom: 30, left: 300 }}
+                onChange={(e) => {
+                    setrows(e.target.value);
+                }}
+                min="1"
+                max="150"
+                value={rows}
+                className="slider"
+                id="myRange"
+            />
+            <input
+                type="range"
+                style={{ position: "absolute", bottom: 30, left: 600 }}
+                onChange={(e) => {
+                    setfps(e.target.value);
+                }}
+                min="1"
+                max="150"
+                value={fps}
+                className="slider"
+                id="myRange"
+            />
         </>
     );
 }
