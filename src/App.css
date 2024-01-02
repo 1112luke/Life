@@ -1,0 +1,46 @@
+.container {
+  background-color: #122738;
+  position: absolute;
+  top: 0px; 
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.gamebox{
+  width: 800px;
+  height : 800px;
+  background-color:#193549;
+  border: 1px solid #FFC600;
+  border-radius: 5px;
+  flex-direction: column;
+  display: flex;
+}
+
+.cellrow{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.cell{
+  border: 1px solid #ffc8003a;
+  flex: 1;
+}
+
+.selected{
+  background-color: #FFC600;
+}
+
+.cell:hover{
+  background-color: #fbff0011;
+}
+
+.cell:hover::after{
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+}
